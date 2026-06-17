@@ -1,80 +1,79 @@
 body {
     margin: 0;
-    font-family: Arial, "Segoe UI Emoji", sans-serif;
-    background:
-        radial-gradient(circle at top left, rgba(225, 6, 0, 0.18), transparent 35%),
-        radial-gradient(circle at top right, rgba(0, 128, 255, 0.12), transparent 30%),
-        #080e1d;
+    font-family: Arial, sans-serif;
+    background: #080e1d;
     color: white;
 }
 
 header {
-    background: rgba(17, 24, 39, 0.92);
-    padding: 24px;
-    text-align: center;
+    background: #10182c;
     border-bottom: 2px solid #e10600;
+    text-align: center;
+    padding: 20px;
 }
 
-h1,
-h2,
-h3 {
-    margin-top: 0;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 main {
-    max-width: 1300px;
+    max-width: 1250px;
     margin: auto;
-    padding: 28px;
+    padding: 25px;
 }
+
+/* HERO */
 
 .hero-card {
     background:
-        linear-gradient(135deg, rgba(22, 29, 49, 0.88), rgba(42, 16, 20, 0.78)),
-        url("images/australia-flag.png");
+        linear-gradient(
+            rgba(10,15,30,0.65),
+            rgba(10,15,30,0.65)
+        ),
+        url("australia-flag.png");
+
     background-size: cover;
     background-position: center;
-    border-radius: 16px;
-    padding: 44px 34px;
-    margin-bottom: 24px;
+    background-repeat: no-repeat;
+
+    border-radius: 18px;
+    padding: 50px;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
+    margin-bottom: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .hero-card h2 {
-    font-size: 38px;
-    margin-bottom: 8px;
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+    margin: 0;
+    font-size: 3rem;
 }
 
 .hero-card p {
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+    margin-top: 15px;
+    font-size: 1.1rem;
 }
+
+/* PODIUM */
 
 .podium-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 
-.podium-box,
-.card {
-    background: rgba(22, 29, 49, 0.95);
+.podium-box {
+    background: #161d31;
+    border: 1px solid #27365f;
     border-radius: 16px;
-    padding: 24px;
-    border: 1px solid #2a3555;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-}
-
-.podium-box p {
-    margin: 0 0 8px;
-    color: #b8c0d9;
+    padding: 22px;
 }
 
 .podium-box h3 {
-    font-size: 28px;
-    margin-bottom: 6px;
+    margin: 10px 0;
+    font-size: 2rem;
 }
 
 .podium-box span {
@@ -82,22 +81,53 @@ main {
     font-weight: bold;
 }
 
+/* MAIN GRID */
+
 .top-grid {
     display: grid;
-    grid-template-columns: 0.8fr 1.6fr;
+    grid-template-columns: 0.9fr 1.8fr;
     gap: 24px;
-    align-items: start;
     margin-bottom: 24px;
 }
 
-.circuit-card {
-    overflow: hidden;
+/* CARDS */
+
+.card {
+    background: #161d31;
+    border: 1px solid #27365f;
+    border-radius: 16px;
+    padding: 24px;
 }
+
+/* TABLES */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #e10600;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #2d3f6c;
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+/* TRACK GUIDE */
 
 .track-guide {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
-    gap: 22px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -105,13 +135,12 @@ main {
     width: 100%;
     border-radius: 12px;
     display: block;
-    background: #000;
 }
 
 .track-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 12px;
 }
 
 .mini-stat {
@@ -122,68 +151,64 @@ main {
 }
 
 .mini-stat p {
-    margin: 0 0 8px;
-    color: #b8c0d9;
-    font-size: 12px;
-    text-transform: uppercase;
+    margin: 0;
+    color: #b7bfd6;
+    font-size: 0.8rem;
 }
 
 .mini-stat h3 {
-    margin: 0;
-    font-size: 22px;
+    margin: 8px 0;
+    font-size: 1.7rem;
 }
 
 .mini-stat small {
-    color: #b8c0d9;
+    color: #b7bfd6;
 }
 
+/* ROUND SCORES */
+
 .scores-card {
-    margin-bottom: 40px;
+    margin-top: 24px;
 }
 
 .scores-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    gap: 20px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 14px;
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-th {
+::-webkit-scrollbar-thumb {
     background: #e10600;
-    color: white;
-    padding: 12px 14px;
-    text-align: left;
+    border-radius: 20px;
 }
 
-td {
-    padding: 10px 14px;
-    border-bottom: 1px solid #2a3555;
-    text-align: left;
-}
-
-th:first-child,
-td:first-child {
-    width: 115px;
-}
+/* MOBILE */
 
 @media (max-width: 1000px) {
-    .podium-grid,
-    .top-grid,
-    .track-guide,
+
+    .podium-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .track-guide {
+        grid-template-columns: 1fr;
+    }
+
     .scores-grid {
         grid-template-columns: 1fr;
     }
 
-    main {
-        padding: 16px;
-    }
-
     .hero-card h2 {
-        font-size: 28px;
+        font-size: 2rem;
     }
 }
