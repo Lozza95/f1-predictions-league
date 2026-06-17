@@ -17,7 +17,7 @@ h1 {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
 }
@@ -30,16 +30,30 @@ main {
 }
 
 table {
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
+    margin-top: 10px;
 }
 
 th {
     background: #e10600;
-    padding: 12px;
+    color: white;
+    padding: 10px 18px;
+    text-align: left;
 }
 
 td {
-    padding: 12px;
+    padding: 10px 18px;
     border-bottom: 1px solid #2a3555;
+    text-align: left;
+}
+
+th:first-child,
+td:first-child {
+    width: 90px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    min-width: 220px;
 }
