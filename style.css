@@ -26,6 +26,44 @@ main {
     padding: 28px;
 }
 
+/* SIDE NAV */
+
+.side-nav {
+    position: fixed;
+    left: 22px;
+    top: 120px;
+    width: 180px;
+    background: rgba(22, 29, 49, 0.96);
+    border: 1px solid #27365f;
+    border-radius: 16px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.side-nav a {
+    color: white;
+    text-decoration: none;
+    background: #10182c;
+    border: 1px solid #27365f;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.side-nav a:hover {
+    border-color: #e10600;
+    transform: translateX(3px);
+    transition: 0.2s ease;
+}
+
+.side-nav .locked {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
 /* HOME HERO */
 
 .home-hero {
@@ -44,7 +82,6 @@ main {
 .home-hero h2 {
     margin: 0;
     font-size: 3rem;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
 }
 
 .home-hero p {
@@ -62,16 +99,13 @@ main {
             rgba(8, 14, 29, 0.55)
         ),
         url("australia-flag.png");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     border-radius: 18px;
     padding: 70px 50px;
     text-align: center;
     margin-bottom: 26px;
-
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
 }
 
@@ -166,7 +200,6 @@ main {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
 }
 
 .race-links a:hover {
@@ -296,6 +329,14 @@ td:first-child {
 }
 
 /* MOBILE */
+
+@media (max-width: 1350px) {
+    .side-nav {
+        position: static;
+        width: auto;
+        margin-bottom: 24px;
+    }
+}
 
 @media (max-width: 1000px) {
     .podium-grid,
