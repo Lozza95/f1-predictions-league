@@ -1,367 +1,79 @@
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background:
-        radial-gradient(circle at top left, rgba(225, 6, 0, 0.18), transparent 35%),
-        radial-gradient(circle at top right, rgba(0, 128, 255, 0.12), transparent 30%),
-        #080e1d;
-    color: white;
-}
-
-header {
-    background: rgba(17, 24, 39, 0.95);
-    border-bottom: 2px solid #e10600;
-    text-align: center;
-    padding: 22px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.4rem;
-}
-
-main {
-    max-width: 1250px;
-    margin: auto;
-    padding: 28px;
-}
-
-/* SIDE NAV */
-
-.side-nav {
-    position: fixed;
-    left: 22px;
-    top: 120px;
-    width: 180px;
-    background: rgba(22, 29, 49, 0.96);
-    border: 1px solid #27365f;
-    border-radius: 16px;
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-}
-
-.side-nav a {
-    color: white;
-    text-decoration: none;
-    background: #10182c;
-    border: 1px solid #27365f;
-    border-radius: 10px;
-    padding: 12px;
-    font-weight: bold;
-}
-
-.side-nav a:hover {
-    border-color: #e10600;
-    transform: translateX(3px);
-    transition: 0.2s ease;
-}
-
-.side-nav .locked {
-    opacity: 0.45;
-    cursor: not-allowed;
-}
-
-/* HOME HERO */
-
-.home-hero {
-    background: linear-gradient(
-        135deg,
-        rgba(22, 29, 49, 0.98),
-        rgba(42, 16, 20, 0.9)
-    );
-    border-radius: 18px;
-    padding: 70px 50px;
-    text-align: center;
-    margin-bottom: 26px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
-}
-
-.home-hero h2 {
-    margin: 0;
-    font-size: 3rem;
-}
-
-.home-hero p {
-    margin-top: 14px;
-    font-size: 1.15rem;
-    color: #d8e0f3;
-}
-
-/* RACE HERO */
-
-.hero-card {
-    background:
-        linear-gradient(
-            rgba(8, 14, 29, 0.45),
-            rgba(8, 14, 29, 0.55)
-        ),
-        url("australia-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 18px;
-    padding: 70px 50px;
-    text-align: center;
-    margin-bottom: 26px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
-}
-
-.hero-card h2 {
-    margin: 0;
-    font-size: 3rem;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
-}
-
-.hero-card p {
-    margin-top: 14px;
-    font-size: 1.15rem;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
-}
-
-/* PODIUM */
-
-.podium-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-bottom: 24px;
-}
-
-.podium-box {
-    background: rgba(22, 29, 49, 0.96);
-    border-radius: 16px;
-    padding: 22px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
-}
-
-.podium-box:nth-child(1) {
-    border: 2px solid #d4af37;
-}
-
-.podium-box:nth-child(2) {
-    border: 2px solid #c0c0c0;
-}
-
-.podium-box:nth-child(3) {
-    border: 2px solid #cd7f32;
-}
-
-.podium-box p {
-    margin: 0 0 8px;
-    color: #b8c0d9;
-}
-
-.podium-box h3 {
-    margin: 10px 0 6px;
-    font-size: 2rem;
-}
-
-.podium-box span {
-    color: #e10600;
-    font-weight: bold;
-}
-
-/* CARDS */
-
-.card {
-    background: rgba(22, 29, 49, 0.96);
-    border: 1px solid #27365f;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(10px);
-    margin-bottom: 24px;
-}
-
-.card:hover,
-.podium-box:hover,
-.race-links a:hover {
-    transform: translateY(-3px);
-    transition: 0.2s ease;
-}
-
-/* RACE LINKS */
-
-.race-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin-top: 16px;
-}
-
-.race-links a {
-    background: #10182c;
-    border: 1px solid #27365f;
-    border-radius: 12px;
-    padding: 18px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.race-links a:hover {
-    border-color: #e10600;
-}
-
-.race-links .locked {
-    opacity: 0.45;
-    cursor: not-allowed;
-}
-
-/* RACE PAGE GRID */
-
-.top-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.8fr;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-/* TABLES */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 14px;
-}
-
-th {
-    background: #e10600;
-    color: white;
-    padding: 12px 14px;
-    text-align: left;
-}
-
-td {
-    padding: 11px 14px;
-    border-bottom: 1px solid #2d3f6c;
-    text-align: left;
-}
-
-tr:hover {
-    background: rgba(255, 255, 255, 0.035);
-}
-
-th:first-child,
-td:first-child {
-    width: 110px;
-}
-
-/* TRACK GUIDE */
-
-.circuit-card {
-    overflow: hidden;
-}
-
-.track-guide {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 22px;
-    align-items: center;
-}
-
-.track-image {
-    width: 100%;
-    border-radius: 12px;
-    display: block;
-    background: #000;
-}
-
-.track-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-}
-
-.mini-stat {
-    background: #10182c;
-    border: 1px solid #27365f;
-    border-radius: 12px;
-    padding: 14px;
-}
-
-.mini-stat p {
-    margin: 0 0 8px;
-    color: #b8c0d9;
-    font-size: 0.78rem;
-    text-transform: uppercase;
-}
-
-.mini-stat h3 {
-    margin: 0;
-    font-size: 1.45rem;
-    line-height: 1.15;
-}
-
-.mini-stat small {
-    color: #b8c0d9;
-}
-
-/* ROUND SCORES */
-
-.scores-card {
-    margin-top: 24px;
-    margin-bottom: 40px;
-}
-
-.scores-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-}
-
-/* SCROLLBAR */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #e10600;
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-    background: #080e1d;
-}
-
-/* MOBILE */
-
-@media (max-width: 1350px) {
-    .side-nav {
-        position: static;
-        width: auto;
-        margin-bottom: 24px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .podium-grid,
-    .top-grid,
-    .track-guide,
-    .scores-grid,
-    .race-links {
-        grid-template-columns: 1fr;
-    }
-
-    main {
-        padding: 16px;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-card,
-    .home-hero {
-        padding: 46px 24px;
-    }
-
-    .hero-card h2,
-    .home-hero h2 {
-        font-size: 2rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Predictions League</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🏎️ F1 Predictions League</h1>
+</header>
+
+<main>
+
+    <section class="home-hero">
+        <h2>Season Dashboard</h2>
+        <p>Overall standings, race results, and prediction league history.</p>
+    </section>
+
+    <section class="card">
+        <h2>Race Pages</h2>
+
+        <div class="race-links">
+
+            <a href="australia.html">
+                🏁 Australian Grand Prix
+            </a>
+
+            <a href="china.html">
+                🏁 Chinese Grand Prix
+            </a>
+
+            <a class="locked" href="#">
+                🏁 Japanese Grand Prix - Coming Soon
+            </a>
+
+            <a class="locked" href="#">
+                🏁 Monaco Grand Prix - Coming Soon
+            </a>
+
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Current Championship Top 10</h2>
+
+        <table>
+            <tr>
+                <th>Position</th>
+                <th>Player</th>
+                <th>Points</th>
+            </tr>
+
+            <tr><td>1</td><td>Deci</td><td>866</td></tr>
+            <tr><td>2</td><td>Parkie</td><td>852</td></tr>
+            <tr><td>3</td><td>Rhyno</td><td>846</td></tr>
+            <tr><td>4</td><td>Animalzzz</td><td>843</td></tr>
+            <tr><td>5</td><td>Tom</td><td>836</td></tr>
+            <tr><td>6</td><td>Sammich</td><td>833</td></tr>
+            <tr><td>7</td><td>Chris</td><td>828</td></tr>
+            <tr><td>8</td><td>Blueeyedragon</td><td>818</td></tr>
+            <tr><td>9</td><td>Guero</td><td>810</td></tr>
+            <tr><td>10</td><td>Silly</td><td>802</td></tr>
+        </table>
+    </section>
+
+    <section class="card">
+        <h2>Next Race</h2>
+
+        <p><strong>🇦🇹 Austrian Grand Prix</strong></p>
+        <p>Round 10</p>
+    </section>
+
+</main>
+
+</body>
+</html>
