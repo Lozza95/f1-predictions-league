@@ -1,51 +1,178 @@
+body {
+    margin: 0;
+    font-family: Arial, "Segoe UI Emoji", sans-serif;
+    background: #080e1d;
+    color: white;
+}
+
+header {
+    background: #111827;
+    padding: 24px;
+    text-align: center;
+    border-bottom: 2px solid #e10600;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+main {
+    max-width: 1300px;
+    margin: auto;
+    padding: 28px;
+}
+
+.hero-card {
+    background: linear-gradient(135deg, #161d31, #2a1014);
+    border-radius: 16px;
+    padding: 34px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.hero-card h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.podium-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.podium-box,
+.card {
+    background: #161d31;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #2a3555;
+}
+
+.podium-box p {
+    margin: 0 0 8px;
+    color: #b8c0d9;
+}
+
+.podium-box h3 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.podium-box span {
+    color: #e10600;
+    font-weight: bold;
+}
+
+.top-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.6fr;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+.circuit-card {
+    overflow: hidden;
+}
+
 .track-guide {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 25px;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 22px;
     align-items: center;
 }
 
 .track-image {
     width: 100%;
     border-radius: 12px;
+    display: block;
     background: #000;
 }
 
 .track-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 14px;
 }
 
-.stat-box {
-    background: #111c3d;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #24345f;
+.mini-stat {
+    background: #10182c;
+    border: 1px solid #27365f;
+    border-radius: 12px;
+    padding: 14px;
 }
 
-.stat-box p {
-    margin: 0;
+.mini-stat p {
+    margin: 0 0 8px;
+    color: #b8c0d9;
     font-size: 12px;
-    color: #9fb0d8;
     text-transform: uppercase;
 }
 
-.stat-box h3 {
-    margin: 8px 0 4px;
-    font-size: 24px;
+.mini-stat h3 {
+    margin: 0;
+    font-size: 22px;
 }
 
-.stat-box small {
-    color: #9fb0d8;
+.mini-stat small {
+    color: #b8c0d9;
 }
 
-@media (max-width: 900px) {
-    .track-guide {
+.wide-stat {
+    grid-column: span 1;
+}
+
+.scores-card {
+    margin-bottom: 40px;
+}
+
+.scores-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+}
+
+th {
+    background: #e10600;
+    color: white;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #2a3555;
+    text-align: left;
+}
+
+th:first-child,
+td:first-child {
+    width: 115px;
+}
+
+@media (max-width: 1000px) {
+    .podium-grid,
+    .top-grid,
+    .track-guide,
+    .scores-grid {
         grid-template-columns: 1fr;
     }
 
-    .track-stats {
-        grid-template-columns: 1fr 1fr;
+    main {
+        padding: 16px;
+    }
+
+    .hero-card h2 {
+        font-size: 28px;
     }
 }
