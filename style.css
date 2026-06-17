@@ -7,32 +7,55 @@ body {
 
 header {
     background: #111827;
-    padding: 20px;
+    padding: 22px;
     text-align: center;
     border-bottom: 2px solid #e10600;
 }
 
-h1 {
-    margin: 0;
+h1,
+h2 {
+    margin-top: 0;
 }
 
 main {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
-    padding: 20px;
+    padding: 24px;
 }
 
+.hero-card,
 .card {
     background: #161d31;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+.hero-card {
+    background: linear-gradient(135deg, #161d31, #2a1014);
+}
+
+.race-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.stat-card {
+    border: 1px solid #e10600;
+}
+
+.big-stat {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 8px 0;
 }
 
 table {
     width: auto;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 th {
@@ -56,4 +79,14 @@ td:first-child {
 th:nth-child(2),
 td:nth-child(2) {
     min-width: 220px;
+}
+
+@media (max-width: 800px) {
+    .race-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 14px;
+    }
 }
