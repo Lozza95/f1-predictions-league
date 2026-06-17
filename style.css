@@ -33,21 +33,32 @@ main {
 
 .hero-card {
     background: linear-gradient(135deg, #161d31, #2a1014);
+    text-align: center;
+}
+
+.hero-card h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
 }
 
 .race-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
     gap: 22px;
     align-items: start;
 }
 
-.stat-card {
+.compact-card {
+    width: fit-content;
+    min-width: 430px;
+}
+
+.podium-card {
     border: 1px solid #e10600;
 }
 
 .big-stat {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
     margin: 8px 0;
 }
@@ -56,6 +67,11 @@ table {
     width: auto;
     border-collapse: collapse;
     margin-top: 12px;
+}
+
+.result-table,
+.card table {
+    min-width: 380px;
 }
 
 th {
@@ -73,7 +89,7 @@ td {
 
 th:first-child,
 td:first-child {
-    width: 90px;
+    width: 110px;
 }
 
 th:nth-child(2),
@@ -84,6 +100,15 @@ td:nth-child(2) {
 @media (max-width: 800px) {
     .race-grid {
         grid-template-columns: 1fr;
+    }
+
+    .compact-card {
+        width: auto;
+        min-width: 0;
+    }
+
+    table {
+        width: 100%;
     }
 
     main {
