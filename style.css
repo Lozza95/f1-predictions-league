@@ -93,20 +93,14 @@ main {
 /* RACE HERO */
 
 .hero-card {
-    background:
-        linear-gradient(
-            rgba(8, 14, 29, 0.45),
-            rgba(8, 14, 29, 0.55)
-        ),
-        url("australia-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     border-radius: 18px;
     padding: 70px 50px;
     text-align: center;
     margin-bottom: 26px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-card h2 {
@@ -119,6 +113,27 @@ main {
     margin-top: 14px;
     font-size: 1.15rem;
     text-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
+}
+
+.hero-card {
+    background:
+        linear-gradient(
+            rgba(8, 14, 29, 0.45),
+            rgba(8, 14, 29, 0.55)
+        ),
+        url("australia-flag.png");
+}
+
+.china-hero {
+    background:
+        linear-gradient(
+            rgba(8, 14, 29, 0.45),
+            rgba(8, 14, 29, 0.55)
+        ),
+        url("china-flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* PODIUM */
@@ -183,7 +198,7 @@ main {
     transition: 0.2s ease;
 }
 
-/* RACE LINKS */
+/* HOME RACE LINKS */
 
 .race-links {
     display: grid;
