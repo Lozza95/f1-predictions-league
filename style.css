@@ -266,8 +266,8 @@ tr:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
- 
-  }
+
+}
 
 /* MT FUJI BACKGROUND */
 .japan-page::before {
@@ -279,6 +279,17 @@ tr:hover {
     opacity: 0.08;
     pointer-events: none;
     z-index: -2;
+}
+
+    /* JAPAN CARD EFFECT */
+.japan-page .card {
+    background: rgba(15, 23, 39, 0.78);
+    backdrop-filter: blur(10px);
+}
+
+.japan-page .circuit-card {
+    background: rgba(15, 23, 39, 0.72);
+    backdrop-filter: blur(12px);
 }
 
 /* JAPAN PAGE EFFECT */
