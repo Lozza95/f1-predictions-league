@@ -83,9 +83,10 @@ body {
 /* MAIN */
 
 .dashboard {
-    padding: 28px;
-    max-width: 1220px;
     width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 24px;
 }
 
 .home-hero {
