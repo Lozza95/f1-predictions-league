@@ -1,103 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    background:
-        radial-gradient(circle at top left, rgba(225, 6, 0, 0.18), transparent 35%),
-        radial-gradient(circle at top right, rgba(0, 128, 255, 0.12), transparent 30%),
-        #080e1d;
-    color: white;
+    background: #070b14;
+    color: #ffffff;
 }
 
-header {
-    background: rgba(17, 24, 39, 0.95);
-    border-bottom: 2px solid #e10600;
-    text-align: center;
-    padding: 22px;
+.app {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    min-height: 100vh;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.4rem;
+/* SIDEBAR */
+
+.sidebar {
+    background: #090e18;
+    border-right: 1px solid #1c2638;
+    padding: 24px 18px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 
-main {
-    max-width: 1250px;
-    margin: auto;
-    padding: 28px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 34px;
 }
 
-/* SIDE NAV */
+.logo span {
+    font-size: 30px;
+}
 
-.side-nav {
-    position: fixed;
-    left: 22px;
-    top: 120px;
-    width: 180px;
-    background: rgba(22, 29, 49, 0.96);
-    border: 1px solid #27365f;
-    border-radius: 16px;
-    padding: 14px;
+.logo strong {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo small {
+    color: #e10600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.sidebar nav {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+    gap: 8px;
 }
 
-.side-nav a {
-    color: white;
+.sidebar nav a {
+    color: #c8d0e0;
     text-decoration: none;
-    background: #10182c;
-    border: 1px solid #27365f;
+    padding: 13px 14px;
     border-radius: 10px;
-    padding: 12px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-.side-nav a:hover {
+.sidebar nav a:hover,
+.sidebar nav .active {
+    background: rgba(225, 6, 0, 0.16);
+    color: white;
+}
+
+.sidebar nav .locked {
+    opacity: 0.45;
+}
+
+.profile-card {
+    position: absolute;
+    bottom: 24px;
+    left: 18px;
+    right: 18px;
+    background: #111827;
+    border: 1px solid #26344f;
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.profile-card small {
+    display: block;
+    color: #9ca8bd;
+    margin-top: 4px;
+}
+
+/* MAIN */
+
+.dashboard {
+    padding: 30px;
+    max-width: 1250px;
+    width: 100%;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.welcome h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.welcome p {
+    margin: 6px 0 0;
+    color: #9ca8bd;
+}
+
+.season-pill {
+    background: #111827;
+    border: 1px solid #26344f;
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: #dce4f5;
+}
+
+/* CARDS */
+
+.card {
+    background: linear-gradient(145deg, #101827, #0d1422);
+    border: 1px solid #1f2b42;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover {
     border-color: #e10600;
-    transform: translateX(3px);
     transition: 0.2s ease;
 }
 
-.side-nav .locked {
-    opacity: 0.45;
-    cursor: not-allowed;
+.label {
+    color: #e10600;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0 0 10px;
 }
 
-/* HOME HERO */
-
-.home-hero {
-    background: linear-gradient(
-        135deg,
-        rgba(22, 29, 49, 0.98),
-        rgba(42, 16, 20, 0.9)
-    );
-    border-radius: 18px;
-    padding: 70px 50px;
-    text-align: center;
-    margin-bottom: 26px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
+.section-header h2,
+.card h2 {
+    margin: 0 0 14px;
 }
 
-.home-hero h2 {
-    margin: 0;
-    font-size: 3rem;
+/* DASHBOARD GRID */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    gap: 18px;
+    margin-bottom: 18px;
 }
 
-.home-hero p {
+.next-race-card {
+    background:
+        linear-gradient(135deg, rgba(16, 24, 39, 0.9), rgba(70, 12, 18, 0.75)),
+        url("albert-park.png");
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.summary-card h2 {
+    font-size: 34px;
+}
+
+/* BUTTONS / LINKS */
+
+.button {
+    display: inline-block;
+    background: #e10600;
+    color: white;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
     margin-top: 14px;
-    font-size: 1.15rem;
-    color: #d8e0f3;
+    font-weight: 700;
 }
 
-/* RACE HERO */
+.race-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.race-links a {
+    background: #0b1220;
+    border: 1px solid #273650;
+    border-radius: 12px;
+    padding: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.race-links a:hover {
+    border-color: #e10600;
+}
+
+.race-links .locked {
+    opacity: 0.45;
+}
+
+/* TABLES */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+}
+
+th {
+    color: #9ca8bd;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #26344f;
+}
+
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #1f2b42;
+}
+
+tr:hover {
+    background: rgba(225, 6, 0, 0.08);
+}
+
+/* RACE PAGES */
 
 .hero-card {
     border-radius: 18px;
     padding: 70px 50px;
     text-align: center;
     margin-bottom: 26px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -105,51 +250,37 @@ main {
 
 .hero-card h2 {
     margin: 0;
-    font-size: 3rem;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
+    font-size: 44px;
+    text-shadow: 0 4px 14px rgba(0,0,0,0.7);
 }
 
 .hero-card p {
-    margin-top: 14px;
-    font-size: 1.15rem;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
+    text-shadow: 0 4px 14px rgba(0,0,0,0.7);
 }
 
 .hero-card {
     background:
-        linear-gradient(
-            rgba(8, 14, 29, 0.45),
-            rgba(8, 14, 29, 0.55)
-        ),
+        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
         url("australia-flag.png");
 }
 
 .china-hero {
     background:
-        linear-gradient(
-            rgba(8, 14, 29, 0.45),
-            rgba(8, 14, 29, 0.55)
-        ),
+        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
         url("china-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
-
-/* PODIUM */
 
 .podium-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
 }
 
 .podium-box {
-    background: rgba(22, 29, 49, 0.96);
+    background: #101827;
     border-radius: 16px;
     padding: 22px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
 }
 
 .podium-box:nth-child(1) {
@@ -164,117 +295,26 @@ main {
     border: 2px solid #cd7f32;
 }
 
-.podium-box p {
-    margin: 0 0 8px;
-    color: #b8c0d9;
-}
-
 .podium-box h3 {
-    margin: 10px 0 6px;
-    font-size: 2rem;
+    font-size: 30px;
+    margin: 8px 0;
 }
 
 .podium-box span {
     color: #e10600;
-    font-weight: bold;
+    font-weight: 700;
 }
-
-/* CARDS */
-
-.card {
-    background: rgba(22, 29, 49, 0.96);
-    border: 1px solid #27365f;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(10px);
-    margin-bottom: 24px;
-}
-
-.card:hover,
-.podium-box:hover,
-.race-links a:hover {
-    transform: translateY(-3px);
-    transition: 0.2s ease;
-}
-
-/* HOME RACE LINKS */
-
-.race-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin-top: 16px;
-}
-
-.race-links a {
-    background: #10182c;
-    border: 1px solid #27365f;
-    border-radius: 12px;
-    padding: 18px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.race-links a:hover {
-    border-color: #e10600;
-}
-
-.race-links .locked {
-    opacity: 0.45;
-    cursor: not-allowed;
-}
-
-/* RACE PAGE GRID */
 
 .top-grid {
     display: grid;
     grid-template-columns: 0.9fr 1.8fr;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-/* TABLES */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 14px;
-}
-
-th {
-    background: #e10600;
-    color: white;
-    padding: 12px 14px;
-    text-align: left;
-}
-
-td {
-    padding: 11px 14px;
-    border-bottom: 1px solid #2d3f6c;
-    text-align: left;
-}
-
-tr:hover {
-    background: rgba(255, 255, 255, 0.035);
-}
-
-th:first-child,
-td:first-child {
-    width: 110px;
-}
-
-/* TRACK GUIDE */
-
-.circuit-card {
-    overflow: hidden;
+    gap: 22px;
 }
 
 .track-guide {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 22px;
+    gap: 18px;
     align-items: center;
 }
 
@@ -288,72 +328,60 @@ td:first-child {
 .track-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 12px;
 }
 
 .mini-stat {
-    background: #10182c;
-    border: 1px solid #27365f;
+    background: #0b1220;
+    border: 1px solid #273650;
     border-radius: 12px;
     padding: 14px;
 }
 
 .mini-stat p {
-    margin: 0 0 8px;
-    color: #b8c0d9;
-    font-size: 0.78rem;
+    color: #9ca8bd;
+    font-size: 12px;
     text-transform: uppercase;
+    margin: 0 0 8px;
 }
 
 .mini-stat h3 {
     margin: 0;
-    font-size: 1.45rem;
-    line-height: 1.15;
+    font-size: 22px;
 }
 
 .mini-stat small {
-    color: #b8c0d9;
+    color: #9ca8bd;
 }
 
-/* ROUND SCORES */
-
 .scores-card {
-    margin-top: 24px;
-    margin-bottom: 40px;
+    margin-top: 22px;
 }
 
 .scores-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 22px;
-}
-
-/* SCROLLBAR */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #e10600;
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-    background: #080e1d;
+    gap: 18px;
 }
 
 /* MOBILE */
 
-@media (max-width: 1350px) {
-    .side-nav {
-        position: static;
-        width: auto;
-        margin-bottom: 24px;
-    }
-}
-
 @media (max-width: 1000px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+
+    .profile-card {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .dashboard-grid,
     .podium-grid,
     .top-grid,
     .track-guide,
@@ -362,21 +390,7 @@ td:first-child {
         grid-template-columns: 1fr;
     }
 
-    main {
-        padding: 16px;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-card,
-    .home-hero {
-        padding: 46px 24px;
-    }
-
-    .hero-card h2,
-    .home-hero h2 {
-        font-size: 2rem;
+    .dashboard {
+        padding: 18px;
     }
 }
