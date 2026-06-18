@@ -276,20 +276,20 @@ tr:hover {
     inset: 0;
     background: url("mt-fuji.png") center right no-repeat;
     background-size: contain;
-    opacity: 0.08;
+    opacity: 0.16;
     pointer-events: none;
     z-index: -2;
 }
 
     /* JAPAN CARD EFFECT */
 .japan-page .card {
-    background: rgba(15, 23, 39, 0.78);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 39, 0.58);
+    backdrop-filter: blur(8px);
 }
 
 .japan-page .circuit-card {
-    background: rgba(15, 23, 39, 0.72);
-    backdrop-filter: blur(12px);
+    background: rgba(15, 23, 39, 0.52);
+    backdrop-filter: blur(8px);
 }
 
 /* JAPAN PAGE EFFECT */
