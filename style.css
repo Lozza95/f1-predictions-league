@@ -330,31 +330,49 @@ tr:hover {
 }
 
 .podium-box {
-    background: #101827;
+    background: rgba(15, 23, 39, 0.68);
     border-radius: 16px;
-    padding: 20px;
+    padding: 18px 20px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
 .podium-box:nth-child(1) {
-    border: 2px solid #d4af37;
+    border: 1px solid #d4af37;
 }
 
 .podium-box:nth-child(2) {
-    border: 2px solid #c0c0c0;
+    border: 1px solid #c0c0c0;
 }
 
 .podium-box:nth-child(3) {
-    border: 2px solid #cd7f32;
+    border: 1px solid #cd7f32;
+}
+
+.podium-box p {
+    margin: 0 0 8px;
+    color: #b8c0d9;
+    font-size: 0.9rem;
 }
 
 .podium-box h3 {
     font-size: 1.8rem;
-    margin: 8px 0;
+    margin: 0 0 10px;
 }
 
 .podium-box span {
-    color: #e10600;
+    display: inline-block;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f4d8df;
+    border: 1px solid rgba(255, 183, 197, 0.28);
+    border-radius: 999px;
+    padding: 5px 10px;
     font-weight: 800;
+    font-size: 0.85rem;
 }
 
 /* RACE PAGE LAYOUT */
