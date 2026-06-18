@@ -330,7 +330,7 @@ tr:hover {
 }
 
 .podium-box {
-    background: rgba(15, 23, 39, 0.68);
+    background: rgba(15, 23, 39, 0.60);
     border-radius: 16px;
     padding: 18px 20px;
     min-height: 120px;
@@ -342,14 +342,17 @@ tr:hover {
 
 .podium-box:nth-child(1) {
     border: 1px solid #d4af37;
+    box-shadow: 0 0 12px rgba(212,175,55,0.15);
 }
 
 .podium-box:nth-child(2) {
     border: 1px solid #c0c0c0;
+    box-shadow: 0 0 12px rgba(192,192,192,0.12);
 }
 
 .podium-box:nth-child(3) {
     border: 1px solid #cd7f32;
+    box-shadow: 0 0 12px rgba(205,127,50,0.12);
 }
 
 .podium-box p {
@@ -372,7 +375,7 @@ tr:hover {
     border-radius: 999px;
     padding: 5px 10px;
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
 }
 
 /* RACE PAGE LAYOUT */
