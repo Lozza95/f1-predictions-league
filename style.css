@@ -272,7 +272,7 @@ tr:hover {
 /* MT FUJI BACKGROUND */
 .japan-page::before {
     content: "";
-    position: fixed;
+    position: cover;
     inset: 0;
     background: url("mt-fuji.png") center right no-repeat;
     background-size: contain;
