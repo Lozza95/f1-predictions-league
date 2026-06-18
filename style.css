@@ -268,6 +268,24 @@ tr:hover {
 
   }
 
+/* JAPAN PAGE EFFECT */
+
+.japan-page::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.20;
+
+    background:
+        radial-gradient(circle at 70% 20%, rgba(255, 192, 203, 0.35), transparent 25%),
+        radial-gradient(circle at 85% 75%, rgba(220, 38, 38, 0.25), transparent 30%);
+}
+
 .hero-card h2 {
     margin: 0;
     font-size: 2.6rem;
