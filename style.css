@@ -258,6 +258,16 @@ tr:hover {
     background-position: center;
 }
 
+.japan-hero {
+    background:
+        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
+        url("Japan flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+
 .hero-card h2 {
     margin: 0;
     font-size: 2.6rem;
