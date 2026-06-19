@@ -343,6 +343,32 @@ tr:hover {
         radial-gradient(circle at 85% 75%, rgba(220, 38, 38, 0.25), transparent 30%);
 }
 
+.miami-hero {
+    background:
+        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
+        url("united-states flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.miami-page::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 75% 25%, rgba(0, 229, 255, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 75%, rgba(255, 79, 216, 0.20), transparent 32%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.miami-page .card,
+.miami-page .circuit-card {
+    background: rgba(15, 23, 39, 0.70);
+    backdrop-filter: blur(10px);
+}
+
 .hero-card h2 {
     margin: 0;
     font-size: 2.6rem;
