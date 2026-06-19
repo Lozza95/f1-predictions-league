@@ -405,6 +405,14 @@ tr:hover {
     text-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
 }
 
+/* MIAMI RESULTS GRID */
+
+.miami-page .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+}
+
 /* PODIUM */
 
 .podium-grid {
