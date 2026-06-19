@@ -251,6 +251,23 @@ tr:hover {
     background-repeat: no-repeat;
 }
 
+/* MELBOURNE SKYLINE BACKGROUND */
+
+.australia-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: url("Albert ParkMelbourne skyline.jpg")
+                center bottom no-repeat;
+
+    background-size: cover;
+
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: -2;
+}
+
 .china-hero {
     background:
         linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
