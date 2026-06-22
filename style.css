@@ -415,16 +415,6 @@ tr:hover {
     background-repeat: no-repeat;
 }
 
-.monaco-page::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url("Port Hercule monaco.jpg") center bottom no-repeat;
-    background-size: cover;
-    opacity: 0.10;
-    pointer-events: none;
-    z-index: -2;
-}
 
 
 .hero-card h2 {
