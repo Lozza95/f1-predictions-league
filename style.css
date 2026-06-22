@@ -369,11 +369,6 @@ tr:hover {
     backdrop-filter: blur(10px);
 }
 
-/* MIAMI LAYOUT */
-
-.miami-page .top-grid {
-    grid-template-columns: 1fr;
-}
 
 /* MIAMI RESULTS GRID */
 
