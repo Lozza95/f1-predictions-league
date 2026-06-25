@@ -267,6 +267,15 @@ tr:hover {
     border: 1px solid #26344f;
 }
 
+.australia-hero {
+    background:
+        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
+        url("australia-flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .australia-page::before {
     content: "";
     position: fixed;
@@ -280,15 +289,6 @@ tr:hover {
     opacity: 0.08;
     pointer-events: none;
     z-index: -2;
-}
-
-.australia-hero {
-    background:
-        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
-        url("australia-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
     .china-hero {
@@ -398,11 +398,11 @@ tr:hover {
 
 .monaco-page .hero-card {
     background:
-        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
-        url("./monaco flag.png") !important;
-    background-size: 100% 50%;
-    background-position: top center;
-    background-repeat: repeat-y;
+        linear-gradient(rgba(8, 14, 29, 0.35), rgba(8, 14, 29, 0.45)),
+        linear-gradient(to bottom, #ce1126 0 50%, #ffffff 50% 100%) !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-card h2 {
