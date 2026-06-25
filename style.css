@@ -282,7 +282,16 @@ tr:hover {
     z-index: -2;
 }
 
-.china-hero {
+.australia-hero {
+    background:
+        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
+        url("australia-flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    .china-hero {
     background:
         linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
         url("china-flag.png");
