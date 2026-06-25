@@ -391,7 +391,7 @@ tr:hover {
     background:
         linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
         url("monaco flag.png") 
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
