@@ -1,4 +1,4 @@
-* {
+{
     box-sizing: border-box;
 }
 
@@ -267,8 +267,6 @@ tr:hover {
     border: 1px solid #26344f;
 }
 
-/* MELBOURNE SKYLINE BACKGROUND */
-
 .australia-page::before {
     content: "";
     position: fixed;
@@ -302,19 +300,6 @@ tr:hover {
 
 }
 
-/* MT FUJI BACKGROUND */
-.japan-page::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url("mt-fuji.png") center right no-repeat;
-    background-size: cover;
-    opacity: 0.16;
-    pointer-events: none;
-    z-index: -2;
-}
-
-    /* JAPAN CARD EFFECT */
 .japan-page .card {
     background: rgba(15, 23, 39, 0.58);
     backdrop-filter: blur(8px);
@@ -324,8 +309,6 @@ tr:hover {
     background: rgba(15, 23, 39, 0.52);
     backdrop-filter: blur(8px);
 }
-
-/* JAPAN PAGE EFFECT */
 
 .japan-page::after {
     content: "";
@@ -368,9 +351,6 @@ tr:hover {
     background: rgba(15, 23, 39, 0.70);
     backdrop-filter: blur(10px);
 }
-
-
-/* MIAMI RESULTS GRID */
 
 .miami-page .results-grid {
     display: grid;
@@ -415,9 +395,6 @@ tr:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
-
-
-
 
 .hero-card h2 {
     margin: 0;
