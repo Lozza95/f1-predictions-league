@@ -388,7 +388,12 @@ tr:hover {
 
 
 .monaco-page .hero-card {
-    background: red !important;
+    background:
+        linear-gradient(rgba(8, 14, 29, 0.45), rgba(8, 14, 29, 0.55)),
+        url("./monaco-flag.png") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-card h2 {
